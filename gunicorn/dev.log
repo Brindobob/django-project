@@ -1,0 +1,829 @@
+[2024-02-04 21:52:51 -0500] [540] [DEBUG] Current configuration:
+  config: config/gunicorn/dev.py
+  wsgi_app: project.wsgi:application
+  bind: ['0.0.0.0:8000']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: True
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/kmacd/django-project/django-gunicorn-nginx
+  daemon: True
+  raw_env: []
+  pidfile: /home/kmacd/django-project/gunicorn/dev.pid
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /home/kmacd/django-project/gunicorn/dev.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/kmacd/django-project/gunicorn/dev.log
+  loglevel: debug
+  capture_output: True
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: gunicorn
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fa6ec44b760>
+  on_reload: <function OnReload.on_reload at 0x7fa6ec44b880>
+  when_ready: <function WhenReady.when_ready at 0x7fa6ec44b9a0>
+  pre_fork: <function Prefork.pre_fork at 0x7fa6ec44bac0>
+  post_fork: <function Postfork.post_fork at 0x7fa6ec44bbe0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fa6ec44bd00>
+  worker_int: <function WorkerInt.worker_int at 0x7fa6ec44be20>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fa6ec44bf40>
+  pre_exec: <function PreExec.pre_exec at 0x7fa6ec46c0d0>
+  pre_request: <function PreRequest.pre_request at 0x7fa6ec46c1f0>
+  post_request: <function PostRequest.post_request at 0x7fa6ec46c280>
+  child_exit: <function ChildExit.child_exit at 0x7fa6ec46c3a0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fa6ec46c4c0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fa6ec46c5e0>
+  on_exit: <function OnExit.on_exit at 0x7fa6ec46c700>
+  ssl_context: <function NewSSLContext.ssl_context at 0x7fa6ec46c820>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2024-02-04 21:52:51 -0500] [540] [INFO] Starting gunicorn 21.2.0
+[2024-02-04 21:52:51 -0500] [540] [DEBUG] Arbiter booted
+[2024-02-04 21:52:51 -0500] [540] [INFO] Listening at: http://0.0.0.0:8000 (540)
+[2024-02-04 21:52:51 -0500] [540] [INFO] Using worker: sync
+[2024-02-04 21:52:51 -0500] [541] [INFO] Booting worker with pid: 541
+[2024-02-04 21:52:51 -0500] [542] [INFO] Booting worker with pid: 542
+[2024-02-04 21:52:51 -0500] [540] [DEBUG] 2 workers
+[2024-02-05 02:53:06 +0000] [541] [DEBUG] GET /
+127.0.0.1 - - [05/Feb/2024:02:53:06 +0000] "GET / HTTP/1.1" 200 183 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+[2024-02-05 02:53:06 +0000] [541] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+127.0.0.1 - - [05/Feb/2024:02:53:06 +0000] "GET /favicon.ico HTTP/1.1" 404 2272 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+[2024-02-05 02:53:06 +0000] [541] [DEBUG] GET /
+127.0.0.1 - - [05/Feb/2024:02:53:06 +0000] "GET / HTTP/1.1" 200 183 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+[2024-02-05 02:53:06 +0000] [541] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+127.0.0.1 - - [05/Feb/2024:02:53:06 +0000] "GET /favicon.ico HTTP/1.1" 404 2272 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+[2024-02-05 02:53:07 +0000] [541] [DEBUG] GET /
+127.0.0.1 - - [05/Feb/2024:02:53:07 +0000] "GET / HTTP/1.1" 200 183 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+[2024-02-05 02:53:07 +0000] [541] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+127.0.0.1 - - [05/Feb/2024:02:53:07 +0000] "GET /favicon.ico HTTP/1.1" 404 2272 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+[2024-02-05 02:53:09 +0000] [542] [DEBUG] GET /
+127.0.0.1 - - [05/Feb/2024:02:53:09 +0000] "GET / HTTP/1.1" 200 183 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0"
+[2024-02-04 21:53:38 -0500] [540] [CRITICAL] WORKER TIMEOUT (pid:541)
+[2024-02-05 02:53:38 +0000] [541] [INFO] Worker exiting (pid: 541)
+[2024-02-04 21:53:38 -0500] [540] [ERROR] Worker (pid:541) exited with code 1
+[2024-02-04 21:53:38 -0500] [540] [ERROR] Worker (pid:541) exited with code 1.
+[2024-02-04 21:53:38 -0500] [560] [INFO] Booting worker with pid: 560
+[2024-02-05 02:54:54 +0000] [542] [DEBUG] GET /
+127.0.0.1 - - [05/Feb/2024:02:54:54 +0000] "GET / HTTP/1.1" 200 183 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0"
+[2024-02-05 02:54:58 +0000] [560] [DEBUG] GET /
+127.0.0.1 - - [05/Feb/2024:02:54:58 +0000] "GET / HTTP/1.1" 200 183 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0"
+[2024-02-05 02:54:59 +0000] [560] [DEBUG] GET /
+127.0.0.1 - - [05/Feb/2024:02:54:59 +0000] "GET / HTTP/1.1" 200 183 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0"
+[2024-02-05 02:55:00 +0000] [560] [DEBUG] GET /
+127.0.0.1 - - [05/Feb/2024:02:55:00 +0000] "GET / HTTP/1.1" 200 183 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0"
+[2024-02-05 02:55:01 +0000] [560] [DEBUG] GET /
+127.0.0.1 - - [05/Feb/2024:02:55:01 +0000] "GET / HTTP/1.1" 200 183 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0"
+[2024-02-05 02:55:02 +0000] [560] [DEBUG] GET /
+127.0.0.1 - - [05/Feb/2024:02:55:02 +0000] "GET / HTTP/1.1" 200 183 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0"
+[2024-02-05 02:55:02 +0000] [560] [DEBUG] GET /
+127.0.0.1 - - [05/Feb/2024:02:55:02 +0000] "GET / HTTP/1.1" 200 183 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0"
+[2024-02-05 02:56:27 +0000] [560] [DEBUG] GET /
+127.0.0.1 - - [05/Feb/2024:02:56:27 +0000] "GET / HTTP/1.1" 200 183 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0"
+[2024-02-04 21:56:33 -0500] [540] [INFO] Handling signal: term
+[2024-02-05 02:56:33 +0000] [560] [INFO] Worker exiting (pid: 560)
+[2024-02-05 02:56:34 +0000] [542] [DEBUG] Closing connection. 
+[2024-02-05 02:56:34 +0000] [542] [INFO] Worker exiting (pid: 542)
+[2024-02-04 21:56:34 -0500] [540] [INFO] Shutting down: Master
+[2024-02-04 21:56:50 -0500] [747] [DEBUG] Current configuration:
+  config: /home/kmacd/django-project/django-gunicorn-nginx/config/gunicorn/dev.py
+  wsgi_app: project.wsgi:application
+  bind: ['0.0.0.0:8000']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: True
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/kmacd/django-project
+  daemon: True
+  raw_env: []
+  pidfile: /home/kmacd/django-project/gunicorn/dev.pid
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /home/kmacd/django-project/gunicorn/dev.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/kmacd/django-project/gunicorn/dev.log
+  loglevel: debug
+  capture_output: True
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: gunicorn
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f45f052b760>
+  on_reload: <function OnReload.on_reload at 0x7f45f052b880>
+  when_ready: <function WhenReady.when_ready at 0x7f45f052b9a0>
+  pre_fork: <function Prefork.pre_fork at 0x7f45f052bac0>
+  post_fork: <function Postfork.post_fork at 0x7f45f052bbe0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f45f052bd00>
+  worker_int: <function WorkerInt.worker_int at 0x7f45f052be20>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f45f052bf40>
+  pre_exec: <function PreExec.pre_exec at 0x7f45f054c0d0>
+  pre_request: <function PreRequest.pre_request at 0x7f45f054c1f0>
+  post_request: <function PostRequest.post_request at 0x7f45f054c280>
+  child_exit: <function ChildExit.child_exit at 0x7f45f054c3a0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f45f054c4c0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f45f054c5e0>
+  on_exit: <function OnExit.on_exit at 0x7f45f054c700>
+  ssl_context: <function NewSSLContext.ssl_context at 0x7f45f054c820>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2024-02-04 21:56:50 -0500] [747] [INFO] Starting gunicorn 21.2.0
+[2024-02-04 21:56:50 -0500] [747] [DEBUG] Arbiter booted
+[2024-02-04 21:56:50 -0500] [747] [INFO] Listening at: http://0.0.0.0:8000 (747)
+[2024-02-04 21:56:50 -0500] [747] [INFO] Using worker: sync
+[2024-02-04 21:56:50 -0500] [748] [INFO] Booting worker with pid: 748
+[2024-02-04 21:56:50 -0500] [748] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/kmacd/django-project/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/kmacd/django-project/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/kmacd/django-project/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/kmacd/django-project/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/kmacd/django-project/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/kmacd/django-project/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/kmacd/django-project/venv/lib/python3.10/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'project'
+[2024-02-04 21:56:50 -0500] [748] [INFO] Worker exiting (pid: 748)
+[2024-02-04 21:56:50 -0500] [747] [ERROR] Worker (pid:748) exited with code 3
+[2024-02-04 21:56:50 -0500] [747] [ERROR] Shutting down: Master
+[2024-02-04 21:56:50 -0500] [747] [ERROR] Reason: Worker failed to boot.
+[2024-02-04 21:59:06 -0500] [842] [DEBUG] Current configuration:
+  config: /home/kmacd/django-project/django-gunicorn-nginx/config/gunicorn/dev.py
+  wsgi_app: project.wsgi:application
+  bind: ['0.0.0.0:8000']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: True
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/kmacd/django-project
+  daemon: True
+  raw_env: []
+  pidfile: /home/kmacd/django-project/gunicorn/dev.pid
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /home/kmacd/django-project/gunicorn/dev.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/kmacd/django-project/gunicorn/dev.log
+  loglevel: debug
+  capture_output: True
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: gunicorn
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f871d413760>
+  on_reload: <function OnReload.on_reload at 0x7f871d413880>
+  when_ready: <function WhenReady.when_ready at 0x7f871d4139a0>
+  pre_fork: <function Prefork.pre_fork at 0x7f871d413ac0>
+  post_fork: <function Postfork.post_fork at 0x7f871d413be0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f871d413d00>
+  worker_int: <function WorkerInt.worker_int at 0x7f871d413e20>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f871d413f40>
+  pre_exec: <function PreExec.pre_exec at 0x7f871d4340d0>
+  pre_request: <function PreRequest.pre_request at 0x7f871d4341f0>
+  post_request: <function PostRequest.post_request at 0x7f871d434280>
+  child_exit: <function ChildExit.child_exit at 0x7f871d4343a0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f871d4344c0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f871d4345e0>
+  on_exit: <function OnExit.on_exit at 0x7f871d434700>
+  ssl_context: <function NewSSLContext.ssl_context at 0x7f871d434820>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2024-02-04 21:59:06 -0500] [842] [INFO] Starting gunicorn 21.2.0
+[2024-02-04 21:59:06 -0500] [842] [DEBUG] Arbiter booted
+[2024-02-04 21:59:06 -0500] [842] [INFO] Listening at: http://0.0.0.0:8000 (842)
+[2024-02-04 21:59:06 -0500] [842] [INFO] Using worker: sync
+[2024-02-04 21:59:06 -0500] [843] [INFO] Booting worker with pid: 843
+[2024-02-04 21:59:06 -0500] [843] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/kmacd/django-project/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/kmacd/django-project/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/kmacd/django-project/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/kmacd/django-project/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/kmacd/django-project/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/kmacd/django-project/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/kmacd/django-project/venv/lib/python3.10/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'project'
+[2024-02-04 21:59:06 -0500] [843] [INFO] Worker exiting (pid: 843)
+[2024-02-04 21:59:06 -0500] [842] [ERROR] Worker (pid:843) exited with code 3
+[2024-02-04 21:59:06 -0500] [842] [ERROR] Shutting down: Master
+[2024-02-04 21:59:06 -0500] [842] [ERROR] Reason: Worker failed to boot.
+[2024-02-04 21:59:25 -0500] [942] [DEBUG] Current configuration:
+  config: django-gunicorn-nginx/config/gunicorn/dev.py
+  wsgi_app: project.wsgi:application
+  bind: ['0.0.0.0:8000']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: True
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/kmacd/django-project
+  daemon: True
+  raw_env: []
+  pidfile: /home/kmacd/django-project/gunicorn/dev.pid
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /home/kmacd/django-project/gunicorn/dev.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/kmacd/django-project/gunicorn/dev.log
+  loglevel: debug
+  capture_output: True
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: gunicorn
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7fe49479f760>
+  on_reload: <function OnReload.on_reload at 0x7fe49479f880>
+  when_ready: <function WhenReady.when_ready at 0x7fe49479f9a0>
+  pre_fork: <function Prefork.pre_fork at 0x7fe49479fac0>
+  post_fork: <function Postfork.post_fork at 0x7fe49479fbe0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7fe49479fd00>
+  worker_int: <function WorkerInt.worker_int at 0x7fe49479fe20>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7fe49479ff40>
+  pre_exec: <function PreExec.pre_exec at 0x7fe4947c00d0>
+  pre_request: <function PreRequest.pre_request at 0x7fe4947c01f0>
+  post_request: <function PostRequest.post_request at 0x7fe4947c0280>
+  child_exit: <function ChildExit.child_exit at 0x7fe4947c03a0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7fe4947c04c0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7fe4947c05e0>
+  on_exit: <function OnExit.on_exit at 0x7fe4947c0700>
+  ssl_context: <function NewSSLContext.ssl_context at 0x7fe4947c0820>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2024-02-04 21:59:25 -0500] [942] [INFO] Starting gunicorn 21.2.0
+[2024-02-04 21:59:25 -0500] [942] [DEBUG] Arbiter booted
+[2024-02-04 21:59:25 -0500] [942] [INFO] Listening at: http://0.0.0.0:8000 (942)
+[2024-02-04 21:59:25 -0500] [942] [INFO] Using worker: sync
+[2024-02-04 21:59:25 -0500] [943] [INFO] Booting worker with pid: 943
+[2024-02-04 21:59:25 -0500] [943] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/kmacd/django-project/venv/lib/python3.10/site-packages/gunicorn/arbiter.py", line 609, in spawn_worker
+    worker.init_process()
+  File "/home/kmacd/django-project/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 134, in init_process
+    self.load_wsgi()
+  File "/home/kmacd/django-project/venv/lib/python3.10/site-packages/gunicorn/workers/base.py", line 146, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/kmacd/django-project/venv/lib/python3.10/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/kmacd/django-project/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 58, in load
+    return self.load_wsgiapp()
+  File "/home/kmacd/django-project/venv/lib/python3.10/site-packages/gunicorn/app/wsgiapp.py", line 48, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/kmacd/django-project/venv/lib/python3.10/site-packages/gunicorn/util.py", line 371, in import_app
+    mod = importlib.import_module(module)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 992, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'project'
+[2024-02-04 21:59:25 -0500] [943] [INFO] Worker exiting (pid: 943)
+[2024-02-04 21:59:25 -0500] [942] [ERROR] Worker (pid:943) exited with code 3
+[2024-02-04 21:59:25 -0500] [942] [ERROR] Shutting down: Master
+[2024-02-04 21:59:25 -0500] [942] [ERROR] Reason: Worker failed to boot.
+[2024-02-04 22:00:13 -0500] [958] [DEBUG] Current configuration:
+  config: config/gunicorn/dev.py
+  wsgi_app: project.wsgi:application
+  bind: ['0.0.0.0:8000']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: True
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/kmacd/django-project/django-gunicorn-nginx
+  daemon: True
+  raw_env: []
+  pidfile: /home/kmacd/django-project/gunicorn/dev.pid
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /home/kmacd/django-project/gunicorn/dev.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/kmacd/django-project/gunicorn/dev.log
+  loglevel: debug
+  capture_output: True
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: gunicorn
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f9adf89f760>
+  on_reload: <function OnReload.on_reload at 0x7f9adf89f880>
+  when_ready: <function WhenReady.when_ready at 0x7f9adf89f9a0>
+  pre_fork: <function Prefork.pre_fork at 0x7f9adf89fac0>
+  post_fork: <function Postfork.post_fork at 0x7f9adf89fbe0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f9adf89fd00>
+  worker_int: <function WorkerInt.worker_int at 0x7f9adf89fe20>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f9adf89ff40>
+  pre_exec: <function PreExec.pre_exec at 0x7f9adf8c00d0>
+  pre_request: <function PreRequest.pre_request at 0x7f9adf8c01f0>
+  post_request: <function PostRequest.post_request at 0x7f9adf8c0280>
+  child_exit: <function ChildExit.child_exit at 0x7f9adf8c03a0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f9adf8c04c0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f9adf8c05e0>
+  on_exit: <function OnExit.on_exit at 0x7f9adf8c0700>
+  ssl_context: <function NewSSLContext.ssl_context at 0x7f9adf8c0820>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2024-02-04 22:00:13 -0500] [958] [INFO] Starting gunicorn 21.2.0
+[2024-02-04 22:00:13 -0500] [958] [DEBUG] Arbiter booted
+[2024-02-04 22:00:13 -0500] [958] [INFO] Listening at: http://0.0.0.0:8000 (958)
+[2024-02-04 22:00:13 -0500] [958] [INFO] Using worker: sync
+[2024-02-04 22:00:13 -0500] [959] [INFO] Booting worker with pid: 959
+[2024-02-04 22:00:13 -0500] [960] [INFO] Booting worker with pid: 960
+[2024-02-04 22:00:13 -0500] [958] [DEBUG] 2 workers
+[2024-02-05 03:00:16 +0000] [960] [DEBUG] GET /
+127.0.0.1 - - [05/Feb/2024:03:00:16 +0000] "GET / HTTP/1.1" 200 183 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0"
+[2024-02-04 22:03:30 -0500] [1087] [DEBUG] Current configuration:
+  config: config/gunicorn/dev.py
+  wsgi_app: project.wsgi:application
+  bind: ['0.0.0.0:8000']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: True
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/kmacd/django-project/django-gunicorn-nginx
+  daemon: True
+  raw_env: []
+  pidfile: /home/kmacd/django-project/gunicorn/dev.pid
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /home/kmacd/django-project/gunicorn/dev.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/kmacd/django-project/gunicorn/dev.log
+  loglevel: debug
+  capture_output: True
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: gunicorn
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f3e2a3c3760>
+  on_reload: <function OnReload.on_reload at 0x7f3e2a3c3880>
+  when_ready: <function WhenReady.when_ready at 0x7f3e2a3c39a0>
+  pre_fork: <function Prefork.pre_fork at 0x7f3e2a3c3ac0>
+  post_fork: <function Postfork.post_fork at 0x7f3e2a3c3be0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f3e2a3c3d00>
+  worker_int: <function WorkerInt.worker_int at 0x7f3e2a3c3e20>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f3e2a3c3f40>
+  pre_exec: <function PreExec.pre_exec at 0x7f3e2a3e40d0>
+  pre_request: <function PreRequest.pre_request at 0x7f3e2a3e41f0>
+  post_request: <function PostRequest.post_request at 0x7f3e2a3e4280>
+  child_exit: <function ChildExit.child_exit at 0x7f3e2a3e43a0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f3e2a3e44c0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f3e2a3e45e0>
+  on_exit: <function OnExit.on_exit at 0x7f3e2a3e4700>
+  ssl_context: <function NewSSLContext.ssl_context at 0x7f3e2a3e4820>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2024-02-04 22:03:30 -0500] [1087] [INFO] Starting gunicorn 21.2.0
+
+Error: Already running on PID 958 (or pid file '/home/kmacd/django-project/gunicorn/dev.pid' is stale)
+
+[2024-02-05 03:03:32 +0000] [960] [DEBUG] GET /
+127.0.0.1 - - [05/Feb/2024:03:03:32 +0000] "GET / HTTP/1.1" 200 183 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0"
+[2024-02-05 03:03:33 +0000] [960] [DEBUG] GET /
+127.0.0.1 - - [05/Feb/2024:03:03:33 +0000] "GET / HTTP/1.1" 200 183 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0"
+[2024-02-05 03:03:33 +0000] [960] [DEBUG] GET /
+127.0.0.1 - - [05/Feb/2024:03:03:33 +0000] "GET / HTTP/1.1" 200 183 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0"
+[2024-02-05 03:03:33 +0000] [960] [DEBUG] GET /
+127.0.0.1 - - [05/Feb/2024:03:03:33 +0000] "GET / HTTP/1.1" 200 183 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0"
+[2024-02-05 03:03:33 +0000] [960] [DEBUG] Ignoring EPIPE
+[2024-02-05 03:03:33 +0000] [960] [DEBUG] GET /favicon.ico
+Not Found: /favicon.ico
+127.0.0.1 - - [05/Feb/2024:03:03:33 +0000] "GET /favicon.ico HTTP/1.1" 404 2272 "http://localhost:8000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0"
+[2024-02-05 03:03:33 +0000] [960] [DEBUG] Ignoring EPIPE
+[2024-02-05 03:03:39 +0000] [960] [DEBUG] Closing connection. 
+[2024-02-05 03:05:27 +0000] [960] [DEBUG] GET /
+127.0.0.1 - - [05/Feb/2024:03:05:27 +0000] "GET / HTTP/1.1" 200 183 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0"
+[2024-02-05 03:05:27 +0000] [960] [DEBUG] GET /
+127.0.0.1 - - [05/Feb/2024:03:05:27 +0000] "GET / HTTP/1.1" 200 183 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0"
+[2024-02-05 03:05:28 +0000] [960] [DEBUG] GET /
+127.0.0.1 - - [05/Feb/2024:03:05:28 +0000] "GET / HTTP/1.1" 200 183 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0"
+[2024-02-05 03:05:28 +0000] [960] [DEBUG] GET /
+127.0.0.1 - - [05/Feb/2024:03:05:28 +0000] "GET / HTTP/1.1" 200 183 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0"
+[2024-02-04 22:05:33 -0500] [958] [INFO] Handling signal: term
+[2024-02-05 03:05:33 +0000] [960] [INFO] Worker exiting (pid: 960)
+[2024-02-05 03:05:33 +0000] [959] [INFO] Worker exiting (pid: 959)
+[2024-02-04 22:05:33 -0500] [958] [INFO] Shutting down: Master
+[2024-02-04 22:05:58 -0500] [1130] [DEBUG] Current configuration:
+  config: config/gunicorn/dev.py
+  wsgi_app: project.wsgi:application
+  bind: ['0.0.0.0:8000']
+  backlog: 2048
+  workers: 2
+  worker_class: sync
+  threads: 1
+  worker_connections: 1000
+  max_requests: 0
+  max_requests_jitter: 0
+  timeout: 30
+  graceful_timeout: 30
+  keepalive: 2
+  limit_request_line: 4094
+  limit_request_fields: 100
+  limit_request_field_size: 8190
+  reload: True
+  reload_engine: auto
+  reload_extra_files: []
+  spew: False
+  check_config: False
+  print_config: False
+  preload_app: False
+  sendfile: None
+  reuse_port: False
+  chdir: /home/kmacd/django-project/django-gunicorn-nginx
+  daemon: True
+  raw_env: []
+  pidfile: /home/kmacd/django-project/gunicorn/dev.pid
+  worker_tmp_dir: None
+  user: 1000
+  group: 1000
+  umask: 0
+  initgroups: False
+  tmp_upload_dir: None
+  secure_scheme_headers: {'X-FORWARDED-PROTOCOL': 'ssl', 'X-FORWARDED-PROTO': 'https', 'X-FORWARDED-SSL': 'on'}
+  forwarded_allow_ips: ['127.0.0.1']
+  accesslog: /home/kmacd/django-project/gunicorn/dev.log
+  disable_redirect_access_to_syslog: False
+  access_log_format: %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"
+  errorlog: /home/kmacd/django-project/gunicorn/dev.log
+  loglevel: debug
+  capture_output: True
+  logger_class: gunicorn.glogging.Logger
+  logconfig: None
+  logconfig_dict: {}
+  logconfig_json: None
+  syslog_addr: udp://localhost:514
+  syslog: False
+  syslog_prefix: None
+  syslog_facility: user
+  enable_stdio_inheritance: False
+  statsd_host: None
+  dogstatsd_tags: 
+  statsd_prefix: 
+  proc_name: None
+  default_proc_name: gunicorn
+  pythonpath: None
+  paste: None
+  on_starting: <function OnStarting.on_starting at 0x7f7b7a953760>
+  on_reload: <function OnReload.on_reload at 0x7f7b7a953880>
+  when_ready: <function WhenReady.when_ready at 0x7f7b7a9539a0>
+  pre_fork: <function Prefork.pre_fork at 0x7f7b7a953ac0>
+  post_fork: <function Postfork.post_fork at 0x7f7b7a953be0>
+  post_worker_init: <function PostWorkerInit.post_worker_init at 0x7f7b7a953d00>
+  worker_int: <function WorkerInt.worker_int at 0x7f7b7a953e20>
+  worker_abort: <function WorkerAbort.worker_abort at 0x7f7b7a953f40>
+  pre_exec: <function PreExec.pre_exec at 0x7f7b7a9740d0>
+  pre_request: <function PreRequest.pre_request at 0x7f7b7a9741f0>
+  post_request: <function PostRequest.post_request at 0x7f7b7a974280>
+  child_exit: <function ChildExit.child_exit at 0x7f7b7a9743a0>
+  worker_exit: <function WorkerExit.worker_exit at 0x7f7b7a9744c0>
+  nworkers_changed: <function NumWorkersChanged.nworkers_changed at 0x7f7b7a9745e0>
+  on_exit: <function OnExit.on_exit at 0x7f7b7a974700>
+  ssl_context: <function NewSSLContext.ssl_context at 0x7f7b7a974820>
+  proxy_protocol: False
+  proxy_allow_ips: ['127.0.0.1']
+  keyfile: None
+  certfile: None
+  ssl_version: 2
+  cert_reqs: 0
+  ca_certs: None
+  suppress_ragged_eofs: True
+  do_handshake_on_connect: False
+  ciphers: None
+  raw_paste_global_conf: []
+  strip_header_spaces: False
+[2024-02-04 22:05:58 -0500] [1130] [INFO] Starting gunicorn 21.2.0
+[2024-02-04 22:05:58 -0500] [1130] [DEBUG] Arbiter booted
+[2024-02-04 22:05:58 -0500] [1130] [INFO] Listening at: http://0.0.0.0:8000 (1130)
+[2024-02-04 22:05:58 -0500] [1130] [INFO] Using worker: sync
+[2024-02-04 22:05:58 -0500] [1131] [INFO] Booting worker with pid: 1131
+[2024-02-04 22:05:58 -0500] [1132] [INFO] Booting worker with pid: 1132
+[2024-02-04 22:05:58 -0500] [1130] [DEBUG] 2 workers
+[2024-02-05 03:06:00 +0000] [1132] [DEBUG] GET /
+127.0.0.1 - - [05/Feb/2024:03:06:00 +0000] "GET / HTTP/1.1" 200 183 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0"
+[2024-02-05 03:06:48 +0000] [1132] [DEBUG] GET /
+127.0.0.1 - - [05/Feb/2024:03:06:48 +0000] "GET / HTTP/1.1" 200 183 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0"
+[2024-02-05 03:06:49 +0000] [1131] [DEBUG] GET /
+127.0.0.1 - - [05/Feb/2024:03:06:49 +0000] "GET / HTTP/1.1" 200 183 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0"
+[2024-02-05 03:06:49 +0000] [1131] [DEBUG] GET /
+127.0.0.1 - - [05/Feb/2024:03:06:49 +0000] "GET / HTTP/1.1" 200 183 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:122.0) Gecko/20100101 Firefox/122.0"
+[2024-02-04 22:06:51 -0500] [1130] [INFO] Handling signal: term
+[2024-02-05 03:06:51 +0000] [1131] [INFO] Worker exiting (pid: 1131)
+[2024-02-05 03:06:51 +0000] [1132] [INFO] Worker exiting (pid: 1132)
+[2024-02-04 22:06:51 -0500] [1130] [INFO] Shutting down: Master
