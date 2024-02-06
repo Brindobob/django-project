@@ -11,10 +11,10 @@ bind = "0.0.0.0:8000"
 # Restart workers when code changes (development only!)
 reload = True
 # Write access and error info to /var/log
-accesslog = errorlog = "/home/kmacd/django-project/gunicorn/dev.log"
+accesslog = errorlog = "/mnt/StorageBox/root/home/grindle/Downloads/django-project/gunicorn/dev.log"
 # Redirect stdout/stderr to log file
 capture_output = True
 # PID file so you can easily fetch process ID
-pidfile = "/home/kmacd/django-project/gunicorn/dev.pid"
+pidfile = "/mnt/StorageBox/root/home/grindle/Downloads/django-project/gunicorn/dev.pid"
 # Daemonize the Gunicorn process (detach & enter background)
 daemon = True

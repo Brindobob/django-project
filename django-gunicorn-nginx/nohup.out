@@ -4,3 +4,12 @@ Not Found: /favicon.ico
 [05/Feb/2024 01:42:17] "GET /favicon.ico HTTP/1.1" 404 2272
 [05/Feb/2024 01:42:40] "GET / HTTP/1.1" 200 183
 [05/Feb/2024 01:43:30] "GET /myapp/ HTTP/1.1" 200 183
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+February 06, 2024 - 03:58:40
+Django version 5.0.1, using settings 'project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
