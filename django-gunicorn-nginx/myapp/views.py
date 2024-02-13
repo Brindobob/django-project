@@ -4,8 +4,14 @@ from django.http import JsonResponse
 from django.views.decorators.http import require_http_methods
 from pymongo import MongoClient
 import random
+import os
 
-client = MongoClient('mongodb://192.168.50.222:27017/')
+try:
+    MONGO_IP = os.environ["MONGO_IP"]
+except KeyError as e:
+    raise RuntimeError("Could not find a MONGO_IP in environment") from e
+
+client = MongoClient(MONGO_IP)
 django_project = client['django_project']
 tasks = django_project['tasks']
 

@@ -30,8 +30,8 @@ except KeyError as e:
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["192.168.50.30"]
-CSRF_TRUSTED_ORIGINS = ["192.168.50.30"]
+ALLOWED_HOSTS = ["localhost"]
+CSRF_TRUSTED_ORIGINS = ["http://localhost:8080"]
 
 
 # Application definition
